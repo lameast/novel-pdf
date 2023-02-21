@@ -3,8 +3,11 @@ import mongoose from 'mongoose';
 const novelSchema = new mongoose.Schema({
  "title": String,
  "author": String,
- "chapters": [String],   
+ "chapters": [{
+    "title": String,
+    "content": String
+}],   
 })
 
-const Novel = mongoose.model('novel', novelSchema);
+const Novel = mongoose.model('Novel', novelSchema);
 export default Novel;
