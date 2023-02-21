@@ -9,7 +9,7 @@ const App = () => {
     onSubmit: values => {
       console.log(values);
 
-      axios.post("localhost:5000/newChapter/", values)
+      axios.post("http://localhost:5000/newChapter/", values)
       .then((res) => {
         console.log(res);
       })
@@ -18,7 +18,7 @@ const App = () => {
       })
     }
   });
-  
+
   return (
   <form onSubmit={formik.handleSubmit}>
     <label htmlFor="url">Enter URL</label>
